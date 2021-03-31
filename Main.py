@@ -8,7 +8,7 @@ pattern = ".*XmlUtil.*|.*NrdInboxProcessingServiceImpl.*"
 with os.scandir('.') as entries:
     for entry in entries:
         if entry.is_file():
-            if '.txt' not in entry.name:
+            if '.log' not in entry.name:
                 break
             print('Start refinement on ' + entry.name)
             with open(entry, 'r') as r:
