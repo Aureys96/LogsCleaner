@@ -9,7 +9,7 @@ with os.scandir('.') as entries:
     for entry in entries:
         if entry.is_file():
             if '.log' not in entry.name:
-                break
+                continue
             print('Start refinement on ' + entry.name)
             with open(entry, 'r') as r:
                 data = r.read()
