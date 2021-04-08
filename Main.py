@@ -22,7 +22,7 @@ with os.scandir('.') as entries:
                     if regexp.match(line):
                         continue
                     filtered.append(line)
-                data = '\n'.join(filtered)
+                data = ''.join(filtered)
                 with open(entry, 'w') as w:
                     w.write(data)
                     print('Finish refinement on ' + entry.name)
